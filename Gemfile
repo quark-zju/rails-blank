@@ -2,37 +2,67 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails-i18n'
+gem 'jquery-rails'
+gem 'slim'
 
-gem 'sqlite3'
+gem 'sqlite3', platforms: :mri
+gem 'thin', platforms: :mri
+gem 'puma', platforms: [:rbx, :jruby]
+gem 'jruby-openssl', platforms: :jruby
+gem 'activerecord-jdbcpostgresql-adapter', platforms: :jruby
 
+# gem 'bj'
+# gem 'mysql2', platforms: :mri
+# gem 'unicorn', platforms: :mri
+# gem 'pg', platforms: :mri
+# gem 'jbuilder'
+# gem 'capistrano'
+# gem 'debugger'
+# gem 'RedCloth'
+# gem 'redcarpet'
+# gem 'devise'
+# gem 'coderay'
+# gem 'nokogiri'
+# gem 'formtastic'
+# gem 'simple_form'
+# gem 'will_paginate'
+# gem 'friendly_id'
+# gem 'country_select'
+# gem 'term-ansicolor', require: false
+# gem 'rack-webconsole', require: false
+# gem 'awesome_print', require: false
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'therubyracer', platforms: :mri
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'pry'
+  gem 'annotate'
+  gem 'warbler', platforms: [:jruby], require: false
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :test do
+  # gem 'turn', :require => false
+  # gem 'spork', '0.9.0.rc9'
+  # gem 'spork-testunit', :git => 'https://github.com/sporkrb/spork-testunit.git'
+  # gem 'guard-spork', '0.3.2'
+  # gem 'guard-test', '0.4.2'
+  # gem 'guard-spin', '0.1.2'
+  # gem 'guard', '0.8.8'
+  # gem 'ruby-prof'
+  # gem 'libnotify', :require => false
+  # gem 'rb-inotify', :require => false
+  # gem 'rspec-rails'
+  # gem 'webrat'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :production do
+  # gem 'therubyracer-heroku'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

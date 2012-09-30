@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The change you wanted was rejected (422)</title>
+  <title>Rejected (422)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
-    }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+    body { padding: 0 3em; background-color: #eee; color: #666; font-family: verdana, arial, sans-serif; display: inline-block; margin: 0 0; }
+    .emoj { font-size: 16em; color: #ccc; }
+    h1 { font-size: 1.1em; line-height: 1.5em; }
   </style>
 </head>
 
+<script>
+//<![CDATA[
+window.onresize = function(e) {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  var body = document.getElementsByTagName('body')[0];
+
+  while (body.clientHeight <= h && body.clientWidth <= w) {
+    var size = parseFloat(body.style.fontSize);
+    if (isNaN(size)) size = 1;
+    body.style.fontSize = (size + 0.5) + 'em';
+  }
+
+  while (body.clientHeight > h || body.clientWidth > w) {
+    var size = parseFloat(body.style.fontSize);
+    if (isNaN(size)) size = 2;
+    if (size <= 1) break;
+    body.style.fontSize = (size - 0.5) + 'em';
+  }
+}
+window.onload = function(e) {
+    var lang = navigator.language;
+    if (lang && lang.toLowerCase().indexOf('zh') == 0) {
+        document.getElementById('p1').innerHTML = 'HTTP 422 - 更改被拒绝';
+        document.getElementById('p2').innerHTML = '您可能再试图改变您没有权限改变的内容。';
+    }
+    window.onresize();
+}
+//]]>
+</script>
+
 <body>
-  <!-- This file lives in public/422.html -->
-  <div class="dialog">
-    <h1>The change you wanted was rejected.</h1>
-    <p>Maybe you tried to change something you didn't have access to.</p>
-  </div>
+  <span class='emoj'>:/</span>
+  <p id='p1'>HTTP 422 - Change Rejected</p>
+  <p id='p2'>Maybe you tried to change something you didn't have access to.</p>
 </body>
 </html>
+

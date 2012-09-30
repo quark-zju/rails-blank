@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: sqlite3
-  database: db/development.sqlite3
+  database: db/shared.sqlite3
   pool: 5
   timeout: 5000
 
@@ -20,6 +20,29 @@ test:
 
 production:
   adapter: sqlite3
-  database: db/production.sqlite3
+  database: db/shared.sqlite3
   pool: 5
   timeout: 5000
+
+# pg_defaults: &pg_defaults
+#  username: 
+#  password:
+#  adapter: postgresql
+#  encoding: utf8
+#  pool: 5
+#  timeout: 2000
+#  reconnect: true
+#  hostaddr: 127.0.1.1
+#
+# development:
+#  database: change-me-here
+#  <<: *pg_defaults
+#
+# production:
+#  database: change-me-here
+#  <<: *pg_defaults
+#
+# test:
+#  database: change-me-here
+#  <<: *pg_defaults
+

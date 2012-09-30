@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Not Found (404)</title>
+  <title>Forbidden (403)</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <style type="text/css">
     body { padding: 0 3em; background-color: #eee; color: #666; font-family: verdana, arial, sans-serif; display: inline-block; margin: 0 0; }
@@ -33,8 +33,8 @@ window.onresize = function(e) {
 window.onload = function(e) {
     var lang = navigator.language;
     if (lang && lang.toLowerCase().indexOf('zh') == 0) {
-        document.getElementById('p1').innerHTML = 'HTTP 404 - 页面不存在';
-        document.getElementById('p2').innerHTML = '您可能输错了网址或者原先的网址已失效。';
+        document.getElementById('p1').innerHTML = 'HTTP 403 - 请求被禁止';
+        document.getElementById('p2').innerHTML = '如果您觉得不应该这样，请联系网站管理员。';
     }
     window.onresize();
 }
@@ -43,8 +43,8 @@ window.onload = function(e) {
 
 <body>
   <span class='emoj'>:/</span>
-  <p id='p1'>HTTP 404 - Not Found</p>
-  <p id='p2'>You may have mistyped the address or the page may have moved.</p>
+  <p id='p1'>HTTP 403 - Forbidden</p>
+  <p id='p2'>Please contact an administrator if you believe this is an error.</p>
 </body>
 </html>
 

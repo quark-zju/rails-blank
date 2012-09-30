@@ -32,6 +32,16 @@ RailsNew::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
-  # Expands the lines which load the assets
-  config.assets.debug = true
+  # less annoying assets log
+  config.assets.debug = false
+  config.assets.logger = nil
+end
+
+# Replace IRB with Pry
+silence_warnings do
+  begin
+    require 'pry'
+    IRB = Pry
+  rescue LoadError
+  end
 end

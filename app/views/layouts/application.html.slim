@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+    title = content_for(:title).presence.try { |title| "#{title} | #{t('.title')}" } || t('.title')
+    link rel='icon' href='/favicon.ico'
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    .container
+      .content
+        .top-flashes
+          / emergency notice
+          - if File.exist? Rails.root.join('public', 'notice')
+            .flash.notice
+              = File.read(Rails.root.join('public', 'notice')).html_safe
+          - flash.each do |key, value|
+            div class="flash #{key}" = value
+        = yield
+
