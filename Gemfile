@@ -11,6 +11,7 @@ gem 'thin', platforms: :mri
 gem 'puma', platforms: [:rbx, :jruby]
 gem 'jruby-openssl', platforms: :jruby
 gem 'activerecord-jdbcpostgresql-adapter', platforms: :jruby
+gem 'rrails', platforms: :mri
 
 # gem 'bj'
 # gem 'mysql2', platforms: :mri
