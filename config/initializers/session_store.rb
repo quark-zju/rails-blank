@@ -1,8 +1,5 @@
-# Be sure to restart your server when you modify this file.
+# Cookie-based
+# RailsNew::Application.config.session_store :cookie_store, key: 's'
 
-RailsNew::Application.config.session_store :cookie_store, key: '_rails-new_session'
-
-# Use the database for sessions instead of the cookie-based default,
-# which shouldn't be used to store highly confidential information
-# (create the session table with "rails generate session_migration")
-# RailsNew::Application.config.session_store :active_record_store
+# ActiveRecord-based
+RailsNew::Application.config.session_store :active_record_store, :key => 's', expire_after: 2.years
