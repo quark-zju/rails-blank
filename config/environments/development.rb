@@ -42,6 +42,7 @@ silence_warnings do
   begin
     require 'pry'
     IRB = Pry
+    Pry.config.pager=false
   rescue LoadError
   end
 end
