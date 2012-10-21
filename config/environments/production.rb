@@ -25,7 +25,7 @@ RailsNew::Application.configure do
   # config.assets.manifest = Rails.root.join("public/a")
 
   # Avoid annoying duplicated assets issue in development environment
-  config.assets.prefix = 'a'
+  config.assets.prefix = '/s'
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
