@@ -4,7 +4,7 @@ gem 'rails', '3.2.8'
 
 gem 'rails-i18n'
 gem 'jquery-rails'
-gem 'slim'
+gem 'slim-rails'
 
 gem 'sqlite3', platforms: :mri
 gem 'thin', platforms: :mri
