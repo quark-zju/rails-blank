@@ -37,12 +37,3 @@ RailsNew::Application.configure do
   config.assets.logger = nil
 end
 
-# Replace IRB with Pry
-silence_warnings do
-  begin
-    require 'pry'
-    IRB = Pry
-    Pry.config.pager=false
-  rescue LoadError
-  end
-end
