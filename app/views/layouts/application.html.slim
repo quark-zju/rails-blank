@@ -8,14 +8,15 @@ html
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body
-    .container
-      .content
+    .container.row
+      .twelve.columns
         .top-flashes
           / emergency notice
           - if File.exist? Rails.root.join('public', 'notice')
             .flash.notice
               = File.read(Rails.root.join('public', 'notice')).html_safe
           - flash.each do |key, value|
-            div class="flash #{key}" = value
-        = yield
+            div class="alert-box #{key}" = value
+      .content
+        == yield
 
