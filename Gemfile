@@ -5,13 +5,13 @@ gem 'rails', '3.2.9'
 gem 'rails-i18n'
 gem 'jquery-rails'
 gem 'slim-rails'
+gem 'zurb-foundation'
 
 gem 'sqlite3', platforms: :mri
 gem 'thin', platforms: :mri
 gem 'puma', platforms: [:rbx, :jruby]
 gem 'jruby-openssl', platforms: :jruby
 gem 'activerecord-jdbcpostgresql-adapter', platforms: :jruby
-gem 'rrails', platforms: :mri
 
 # gem 'bj'
 # gem 'mysql2', platforms: :mri
@@ -30,9 +30,6 @@ gem 'rrails', platforms: :mri
 # gem 'will_paginate'
 # gem 'friendly_id'
 # gem 'country_select'
-# gem 'term-ansicolor', require: false
-# gem 'rack-webconsole', require: false
-# gem 'awesome_print', require: false
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -46,6 +43,9 @@ group :development do
   gem 'pry'
   gem 'annotate'
   gem 'warbler', platforms: [:jruby], require: false
+  # gem 'term-ansicolor', require: false
+  # gem 'rack-webconsole', require: false
+  # gem 'awesome_print', require: false
 end
 
 group :test do
