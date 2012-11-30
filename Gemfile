@@ -1,35 +1,40 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.9'
 
-gem 'rails-i18n'
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'zurb-foundation'
 
 gem 'sqlite3', platforms: :mri
 gem 'thin', platforms: :mri
+gem 'cancan'
 gem 'puma', platforms: [:rbx, :jruby]
 gem 'jruby-openssl', platforms: :jruby
 gem 'activerecord-jdbcpostgresql-adapter', platforms: :jruby
 
+# gem 'activeadmin'
 # gem 'bj'
-# gem 'mysql2', platforms: :mri
-# gem 'unicorn', platforms: :mri
-# gem 'pg', platforms: :mri
-# gem 'jbuilder'
 # gem 'capistrano'
-# gem 'debugger'
-# gem 'RedCloth'
-# gem 'redcarpet'
-# gem 'devise'
 # gem 'coderay'
-# gem 'nokogiri'
-# gem 'formtastic'
-# gem 'simple_form'
-# gem 'will_paginate'
-# gem 'friendly_id'
 # gem 'country_select'
+# gem 'debugger'
+gem 'devise'
+# gem 'devise-i18n'
+# gem 'formtastic'
+# gem 'friendly_id'
+# gem 'jbuilder'
+# gem 'mysql2', platforms: :mri
+# gem 'nokogiri'
+# gem 'paperclip'
+# gem 'pg', platforms: :mri
+# gem 'rails-i18n'
+# gem 'redcarpet'
+# gem 'RedCloth'
+# gem 'simple_form'
+# gem 'strong_parameters'
+# gem 'unicorn', platforms: :mri
+# gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -43,6 +48,8 @@ group :development do
   gem 'pry'
   gem 'annotate'
   gem 'warbler', platforms: [:jruby], require: false
+  # gem 'copycopter_client', '~> 2.0.1'
+  gem 'rspec-rails'
   # gem 'term-ansicolor', require: false
   # gem 'rack-webconsole', require: false
   # gem 'awesome_print', require: false
@@ -61,6 +68,9 @@ group :test do
   # gem 'rb-inotify', :require => false
   # gem 'rspec-rails'
   # gem 'webrat'
+  gem 'rspec-rails'
+  gem 'capybara', '1.1.2'
+  gem 'spin'
 end
 
 group :production do
