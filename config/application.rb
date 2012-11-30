@@ -59,7 +59,10 @@ module RailsNew
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # use slim as default template engine
+    # Use slim as default template engine
     config.generators.template_engine = :slim
+
+    # Use numeric prefixes as migration prefix
+    config.active_record.timestamped_migrations = false
   end
 end
