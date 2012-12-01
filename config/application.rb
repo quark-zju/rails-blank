@@ -9,6 +9,12 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
+# Railscast 085-yaml-configuration-revised
+CONFIG = YAML.load_file(Dir[File.expand_path('../application.yml{,.example}', __FILE__)].first)
+CONFIG.merge! CONFIG.fetch(Rails.env, {})
+CONFIG.symbolize_keys!
+
 module RailsNew
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

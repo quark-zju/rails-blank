@@ -16,3 +16,6 @@
 
 # Ignore sass-cache
 .sass-cache/
+
+# Ignore sensitive application.yml
+/config/application.yml
