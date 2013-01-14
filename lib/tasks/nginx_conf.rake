@@ -58,7 +58,7 @@ server {
   location @thin {
 !
 puts <<"!" if limit
-    limit_req zone=one burst=#{limit * servers * 2};
+    limit_req zone=#{identify} burst=#{limit * servers * 2};
 !
 puts <<"!"
     proxy_set_header X-Real-IP $remote_addr;
