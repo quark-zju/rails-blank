@@ -15,7 +15,7 @@ CONFIG = YAML.load_file(Dir[File.expand_path('../application.yml{,.example}', __
 CONFIG.merge! CONFIG.fetch(Rails.env, {})
 CONFIG.symbolize_keys!
 
-module RailsNew
+module RailsApp
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -37,7 +37,7 @@ module RailsNew
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = config.i18n.locale = :zh_cn
+    # config.i18n.default_locale = config.i18n.locale = :'zh-CN'
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

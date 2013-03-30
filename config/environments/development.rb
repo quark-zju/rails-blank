@@ -1,4 +1,4 @@
-RailsNew::Application.configure do
+RailsApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -32,7 +32,7 @@ RailsNew::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
-  # less annoying assets log
+  # Do not expand annoying assets log
   config.assets.debug = false
   config.assets.logger = nil
 end

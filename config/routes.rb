@@ -1,3 +1,3 @@
-RailsNew::Application.routes.draw do
+RailsApp::Application.routes.draw do
 
 end

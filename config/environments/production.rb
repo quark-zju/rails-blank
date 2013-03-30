@@ -1,4 +1,4 @@
-RailsNew::Application.configure do
+RailsApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -24,7 +24,7 @@ RailsNew::Application.configure do
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = Rails.root.join("public/a")
 
-  # Avoid annoying duplicated assets issue in development environment
+  # Avoid duplicated assets issue in development environment
   config.assets.prefix = '/s'
 
   # Specifies the header that your server uses for sending files

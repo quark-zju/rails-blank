@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.13'
 
 gem 'jquery-rails'
 gem 'slim-rails'
@@ -11,14 +11,10 @@ gem 'thin', platforms: :mri
 gem 'cancan'
 gem 'puma', platforms: [:rbx, :jruby]
 gem 'jruby-openssl', platforms: :jruby
-gem 'activerecord-jdbcpostgresql-adapter', platforms: :jruby
 
 # gem 'activeadmin'
 # gem 'bj'
 # gem 'capistrano'
-# gem 'coderay'
-# gem 'country_select'
-# gem 'debugger'
 gem 'devise'
 # gem 'devise-i18n'
 # gem 'formtastic'
@@ -47,9 +43,8 @@ end
 group :development do
   gem 'pry'
   gem 'annotate'
-  gem 'warbler', platforms: [:jruby], require: false
+  gem 'bullet'
   # gem 'copycopter_client', '~> 2.0.1'
-  gem 'rspec-rails'
   # gem 'term-ansicolor', require: false
   # gem 'rack-webconsole', require: false
   # gem 'awesome_print', require: false
@@ -69,11 +64,8 @@ group :test do
   # gem 'rspec-rails'
   # gem 'webrat'
   gem 'rspec-rails'
-  gem 'capybara', '1.1.2'
-  gem 'spin'
 end
 
 group :production do
-  # gem 'therubyracer-heroku'
 end
 
