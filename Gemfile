@@ -4,11 +4,11 @@ gem 'rails', '3.2.13'
 
 gem 'jquery-rails'
 gem 'slim-rails'
-gem 'zurb-foundation'
+gem 'zurb-foundation', '~> 4.0'
 
 gem 'sqlite3', platforms: :mri
 gem 'thin', platforms: :mri
-gem 'cancan'
+gem 'cancan', '~> 1.6'
 gem 'puma', platforms: [:rbx, :jruby]
 gem 'jruby-openssl', platforms: :jruby
 
