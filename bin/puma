@@ -18,9 +18,8 @@ if [ -f "$CTRLFILE" ]; then
         pumactl -S $CTRLFILE restart
     fi
 else
-    for i in pids sockets; do 
-        \mkdir -p ./tmp/$i
-    done
+    # create essential directories
+    \mkdir -p tmp/pids tmp/sockets
     \rm -f $SOCKETFILE
 
     echo 'Starting puma ...'

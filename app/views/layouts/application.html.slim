@@ -4,20 +4,17 @@ html
     meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
     title = content_for(:title).presence.try { |title| "#{title} | #{t('.title')}" } || t('.title')
     link rel='icon' href='/favicon.ico'
-    = stylesheet_link_tag "application", :media => "all"
-    = javascript_include_tag 'application'
+    = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    .container.row
-      .twelve.columns
-        .top-flashes
-          / emergency notice
-          - notice_file = Rails.root.join('public', '_notice.html')
-          - if notice_file.exist?
-            .flash.notice
-              = notice_file.read.html_safe
-          - flash.each do |key, value|
-            div class="alert-box #{key}" = value
-      .content
-        == yield
+    .container
+      / emergency notice
+      - notice_file = Rails.root.join('public', '_notice.html')
+      - if notice_file.exist?
+        .flash.notice
+          = notice_file.read.html_safe
+      - flash.each do |key, value|
+        div class="alert-box #{key}" = value
 
+      == yield

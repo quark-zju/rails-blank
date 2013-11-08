@@ -1,8 +1,2 @@
 secret_token: '021b03de120420e3d5a27b969b375fb6279be3403c6e255180983df9a9530182cc016e4904183e9c5c1cd3f9b4f6362e4e5241152063f6f4dbb2695ac4995372'
-development:
-  foo: 1
-test:
-  foo: 2
-production:
-  foo: 3
-
+session_store_key: 's'

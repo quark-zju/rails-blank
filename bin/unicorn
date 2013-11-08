@@ -15,5 +15,6 @@ if [ -e $PIDFILE ] && kill -0 `cat $PIDFILE`; then
         kill -USR2 `cat $PIDFILE`
     fi
 else
+    mkdir -p tmp/pids tmp/sockets
     bundle exec unicorn_rails -E $RAILS_ENV -c config/unicorn.rb "$@"
 fi

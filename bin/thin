@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# goto RAILS_ROOT
+cd $(dirname `readlink -f "$0"`)/..
+
+# create essential directories
+mkdir -p tmp/pids tmp/sockets
+
+# exec thin
+exec bundle exec thin -C config/thin.yml "$@"
