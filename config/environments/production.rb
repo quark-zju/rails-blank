@@ -36,7 +36,7 @@ RailsApp::Application.configure do
   config.assets.version = '1.0'
 
   # For assets directory, use a short name to save some bytes.
-  config.assets.prefix = '/s'
+  config.assets.prefix = CONFIG[:assets_prefix] || '/s'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
