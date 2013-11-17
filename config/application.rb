@@ -32,5 +32,8 @@ module RailsApp
 
     # Use numeric prefixes as migration prefix.
     config.active_record.timestamped_migrations = false
+
+    # http://robots.thoughtbot.com/content-compression-with-rack-deflater/
+    config.middleware.use Rack::Deflater
   end
 end
