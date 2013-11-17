@@ -48,8 +48,12 @@ end
 
 # Console, Development Utilities
 # ----------------------------------------------------------------------
-gem 'annotate', group: :development
-gem 'bullet', group: :development
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller' # required by 'better_errors'
+  gem 'annotate'
+  gem 'bullet'
+end
 gem 'pry-rails'
 gem 'table_print'
 

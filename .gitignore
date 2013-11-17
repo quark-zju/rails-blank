@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 
-# Ignore sass-cache
+# Ignore sass-cache.
 .sass-cache/
 
 # Ignore sensitive config files.
