@@ -5,8 +5,8 @@ environment: production
 timeout: 30
 log: log/thin.log
 pid: tmp/pids/thin.pid
-max_conns: 51200
-max_persistent_conns: 512
+max_conns: 2048
+max_persistent_conns: 128
 require: []
 wait: 30
 socket: tmp/sockets/thin.socket
@@ -15,4 +15,6 @@ socket: tmp/sockets/thin.socket
 servers: 2
 daemonize: true
 onebyone: true
+threaded: true
+threadpool_size: 16
 
