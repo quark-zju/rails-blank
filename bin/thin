@@ -3,6 +3,10 @@
 # goto RAILS_ROOT
 cd $(dirname `readlink -f "$0"`)/..
 
+# better GC
+# http://discuss.samsaffron.com/t/demystifying-the-ruby-gc/81
+export RUBY_GC_MALLOC_LIMIT=64000000
+
 # create essential directories
 mkdir -p tmp/pids tmp/sockets
 

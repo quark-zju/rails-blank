@@ -3,6 +3,9 @@
 # goto RAILS_ROOT
 cd $(dirname `readlink -f "$0"`)/..
 
+# better GC
+export RUBY_GC_MALLOC_LIMIT=64000000
+
 PIDFILE=./tmp/pids/unicorn.pid
 
 if [ -e $PIDFILE ] && kill -0 `cat $PIDFILE`; then

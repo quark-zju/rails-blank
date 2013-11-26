@@ -3,6 +3,9 @@
 # goto RAILS_ROOT
 cd $(dirname `readlink -f "$0"`)/..
 
+# better GC
+export RUBY_GC_MALLOC_LIMIT=128000000
+
 CTRLFILE=tmp/pids/puma-control
 PUMAPID=`grep pid: tmp/sockets/puma-control | grep -o '[0-9]*'`
 SOCKETFILE='$PWD/tmp/sockets/puma.socket'
