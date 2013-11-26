@@ -82,16 +82,20 @@ gem 'sqlite3', platforms: :mri
 # gem 'mysql2', platforms: :mri
 # gem 'pg', platforms: :mri
 
-# Modules
+# Rack Stack
+# ----------------------------------------------------------------------
+gem 'rack-mini-profiler'
+
+# Rails Plug-ins (relatively independent, large)
 # ----------------------------------------------------------------------
 # gem 'activeadmin'
 # gem 'bj'
 # gem 'devise'
-# gem 'devise-i18n'
 
 # I18N
 # ----------------------------------------------------------------------
 # gem 'rails-i18n'
+# gem 'devise-i18n'
 
 # Testing
 # ----------------------------------------------------------------------

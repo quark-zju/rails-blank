@@ -79,6 +79,8 @@ GEM
     pry-rails (0.3.2)
       pry (>= 0.9.10)
     rack (1.5.2)
+    rack-mini-profiler (0.1.31)
+      rack (>= 1.1.3)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.1)
@@ -151,6 +153,9 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uniform_notifier (1.4.0)
+    valle (0.2.0)
+      activerecord (>= 3.0)
+      activesupport
 
 PLATFORMS
   ruby
@@ -166,6 +171,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   pry-rails
+  rack-mini-profiler
   rails (= 4.0.1)
   rspec-rails
   sass-rails (~> 4.0.0)
@@ -175,3 +181,4 @@ DEPENDENCIES
   table_print
   turbolinks
   uglifier (>= 1.3.0)
+  valle
