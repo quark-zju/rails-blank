@@ -68,6 +68,7 @@ gem 'slim-rails'
 # Model / Controller / View Helpers
 # ----------------------------------------------------------------------
 gem 'cancan', '~> 1.6'
+gem 'valle'
 # gem 'friendly_id'
 # gem 'paperclip'
 # gem 'will_paginate'
