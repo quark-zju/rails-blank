@@ -61,6 +61,7 @@ puts <<"!" if limit
     limit_req zone=#{identify} burst=#{limit * servers * 2};
 !
 puts <<"!"
+    proxy_set_header CLIENT_IP $remote_addr;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;
