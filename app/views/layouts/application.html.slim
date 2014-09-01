@@ -8,13 +8,4 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    .container
-      / emergency notice
-      - notice_file = Rails.root.join('public', '_notice.html')
-      - if notice_file.exist?
-        .flash.notice
-          = notice_file.read.html_safe
-      - flash.each do |key, value|
-        div class="alert-box #{key}" = value
-
-      == yield
+    == yield

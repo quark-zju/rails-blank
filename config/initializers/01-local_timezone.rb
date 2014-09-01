@@ -1,6 +1,7 @@
 if Rails.application.config.time_zone.nil?
 
-  # code from rake task time:zones:local
+  # copied from rake task time:zones:local
+  # NON-DEFAULT
   jan_offset = Time.now.beginning_of_year.utc_offset
   jul_offset = Time.now.beginning_of_year.change(:month => 7).utc_offset
   offset = jan_offset < jul_offset ? jan_offset : jul_offset

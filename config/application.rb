@@ -4,12 +4,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env)
-
-# Railscast 085-yaml-configuration-revised
-CONFIG = YAML.load_file(Dir[File.expand_path('../application.yml{,.example}', __FILE__)].first)
-CONFIG.merge! CONFIG.fetch(Rails.env, {})
-CONFIG.symbolize_keys!
+Bundler.require(*Rails.groups)
 
 module RailsApp
   class Application < Rails::Application
@@ -19,10 +14,12 @@ module RailsApp
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+    # NON-DEFAULT
     # config.time_zone = 'Beijing'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    # NON-DEFAULT
     # config.i18n.default_locale = :'zh-CN'
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
@@ -31,9 +28,11 @@ module RailsApp
     # config.active_record.schema_format = :sql
 
     # Use numeric prefixes as migration prefix.
+    # NON-DEFAULT
     config.active_record.timestamped_migrations = false
 
     # http://robots.thoughtbot.com/content-compression-with-rack-deflater/
+    # NON-DEFAULT
     config.middleware.use Rack::Deflater
   end
 end

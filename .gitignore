@@ -19,5 +19,4 @@
 .sass-cache/
 
 # Ignore sensitive config files.
-/config/application.yml
 /config/database.yml
