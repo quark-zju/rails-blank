@@ -50,18 +50,19 @@ group :development do
 end
 gem 'pry-rails'
 gem 'table_print'
+gem 'term-ansicolor'
 
 # HTML / CSS / JS, Json / XML
 # ----------------------------------------------------------------------
 gem 'slim-rails'
-# gem 'zurb-foundation', '~> 4.0'
+# gem 'foundation-rails', '~> 5.1'
 # gem 'redcarpet'
 # gem 'RedCloth'
 # gem 'nokogiri'
 
 # Model / Controller / View Helpers
 # ----------------------------------------------------------------------
-gem 'cancan', '~> 1.6'
+gem 'cancancan', '~> 1.9'
 gem 'valle'
 # gem 'friendly_id'
 # gem 'paperclip'
@@ -78,7 +79,7 @@ gem 'activerecord-session_store'
 
 # Rack Stack
 # ----------------------------------------------------------------------
-gem 'rack-mini-profiler'
+# gem 'rack-mini-profiler'
 
 # Rails Plug-ins (relatively independent, large)
 # ----------------------------------------------------------------------
