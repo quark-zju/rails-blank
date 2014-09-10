@@ -7,5 +7,9 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-# NON-DEFAULT For assets directory, use a short name to save some bytes.
-Rails.application.config.assets.prefix = ENV['assets_prefix'] || '/a'
+# NON-DEFAULT For assets directory, use a short name to save some bytes. Besides, use
+# different directory for production and development to avoid development using (probably
+# outdated) production assets.
+if Rails.env.production?
+  Rails.application.config.assets.prefix = ENV['assets_prefix'] || '/a'
+end
