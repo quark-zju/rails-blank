@@ -31,6 +31,9 @@ module RailsApp
     # NON-DEFAULT
     config.active_record.timestamped_migrations = false
 
+    # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.active_record.raise_in_transactional_callbacks = true
+
     # http://robots.thoughtbot.com/content-compression-with-rack-deflater/
     # NON-DEFAULT
     config.middleware.use Rack::Deflater
